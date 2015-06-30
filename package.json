@@ -1,0 +1,27 @@
+{
+  "name": "misojs-codemirror-component",
+  "version": "0.0.1",
+  "description": "A code mirror component for use in misojs (would probably also work with mithril)",
+  "main": "codemirror.component.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsguy/misojs-codemirror-component.git"
+  },
+  "dependencies": {
+    "codemirror": "^5.4.0"
+  },
+  "keywords": [
+    "misojs",
+    "mithril",
+    "codemirror"
+  ],
+  "author": "jsguy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsguy/misojs-codemirror-component/issues"
+  },
+  "homepage": "https://github.com/jsguy/misojs-codemirror-component#readme"
+}
