@@ -4,7 +4,7 @@
 var m = require('mithril'),
 	//	Assume we're installed within misojs in the 
 	//	/public directory - pass in different path if needed
-	basePath = "node_modules/misojs-codemirror/node_modules/codemirror/";
+	basePath = "node_modules/misojs-codemirror-component/node_modules/codemirror/";
 
 var CodemirrorComponent = {
 	//	Returns a textarea
@@ -44,7 +44,7 @@ var CodemirrorComponent = {
 };
 
 module.exports = function(args){
-	if(args.basePath) {
+	if(args && args.basePath) {
 		basePath = args.basePath;
 	}
 	return CodemirrorComponent;
