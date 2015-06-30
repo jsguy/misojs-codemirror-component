@@ -42,3 +42,13 @@ m("div", [
 ```
 
 This will render a code mirror editor.
+
+## Updating
+
+Don't forget to update with the prefix as well, eg, in /public of your misojs app:
+
+```javascript
+npm update misojs-codemirror-component --prefix ./public
+```
+
+This will update the component.
