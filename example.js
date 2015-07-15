@@ -16,9 +16,9 @@ module.exports.index = {
 	},
 	view: function(ctrl) {
 		with(sugartags) {
-			return DIV({"class": "cw cf"}, [
-				H1("Code mirror example"),
-				DIV(m.component(CodeMirror, {
+			return m('DIV', {"class": "cw cf"}, [
+				m('H1', "Code mirror example"),
+				m('DIV', m.component(CodeMirror, {
 					value: ctrl.value
 				}))
 			]);

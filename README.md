@@ -1,6 +1,6 @@
 # misojs-codemirror-component
 
-A code mirror component for use in misojs (would probably also work with mithril)
+A code mirror component for use in misojs
 
 ## installation
 

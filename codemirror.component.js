@@ -12,7 +12,7 @@ var CodemirrorComponent = {
 		return m("div", [
 			//	Code mirror includes (it's ok to include 
 			//	these each time - browser will cache it!)
-			//	TODO: Allow more modes!
+			//	TODO: Allow more modes and config options.
 			m("SCRIPT", { src:  basePath + "lib/codemirror.js"}),
 			m("LINK", {   href: basePath + "lib/codemirror.css", rel: "stylesheet"}),
 			m("SCRIPT", { src:  basePath + "mode/javascript/javascript.js"}),
@@ -43,6 +43,7 @@ var CodemirrorComponent = {
 	}
 };
 
+//	Allw the user to pass in arguments when loading.
 module.exports = function(args){
 	if(args && args.basePath) {
 		basePath = args.basePath;
