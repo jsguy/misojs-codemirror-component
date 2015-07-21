@@ -11,7 +11,8 @@
     "url": "git+https://github.com/jsguy/misojs-codemirror-component.git"
   },
   "dependencies": {
-    "codemirror": "^5.4.0"
+    "codemirror": "^5.4.0",
+    "mithril": "^0.2.0"
   },
   "keywords": [
     "misojs",
