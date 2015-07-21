@@ -1,14 +1,14 @@
 /*
-	Codemirror component
+	Misojs Codemirror component
+
+	Note: To use with mithril, use browserify.
 */
 var m = require('mithril'),
 	//	Assume we're installed within misojs in the "public" directory - pass in different path if needed
 	basePath = "node_modules/misojs-codemirror-component/node_modules/codemirror/";
 
-/*
-	Here we have a few fixes to make CM work in node - we only setup each,
-	if they don't already exist, otherwise we would override the browser
-*/
+// 	Here we have a few fixes to make CM work in node - we only setup each,
+//	if they don't already exist, otherwise we would override the browser
 global.document = global.document || {};
 global.document.createElement = global.document.createElement || function(){
 	return {
@@ -23,8 +23,12 @@ global.navigator = global.navigator || {};
 global.navigator.userAgent = global.navigator.userAgent || "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36";
 
 //	Grab code mirror and the javascript language
+//	Note: you cannot dynamically require with browserify, 
+//	so we must get whatever modes we need here.
 var CodeMirror = require('codemirror');
 require("codemirror/mode/javascript/javascript.js");
+require("codemirror/mode/htmlmixed/htmlmixed.js");
+require("codemirror/mode/css/css.js");
 
 //	Our component
 var CodemirrorComponent = {
