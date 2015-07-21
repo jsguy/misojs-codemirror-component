@@ -61,7 +61,7 @@ var CodemirrorComponent = {
 	}
 };
 
-//	Allw the user to pass in arguments when loading.
+//	Allow the user to pass in arguments when loading.
 module.exports = function(args){
 	if(args && args.basePath) {
 		basePath = args.basePath;
