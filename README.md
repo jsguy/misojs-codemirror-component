@@ -7,17 +7,15 @@ A code mirror component for use in misojs
 In your main misojs application directory:
 
 ```
-npm install misojs-codemirror-component --save --prefix ./public
-cd public/node_modules/misojs-codemirror-component
-npm install .
+npm install misojs-codemirror-component --save
 ```
 
 ## Usage
 
-You've now installed the component into the /public directory, and you can acceess it in your mvc entities like so:
+Acceess the component in your mvc entities like so:
 
 ```javascript
-var CodeMirror = require('../public/node_modules/misojs-codemirror-component/codemirror.component.js')();
+var CodeMirror = require('misojs-codemirror-component')();
 ```
 
 In your controller, you might set a value like so:
@@ -43,12 +41,6 @@ m("div", [
 
 This will render a code mirror editor.
 
-## Updating
+## Isomorphism
 
-Don't forget to update with the prefix as well, eg, in /public of your misojs app:
-
-```javascript
-npm update misojs-codemirror-component --prefix ./public
-```
-
-This will update the component.
+The server generated code simply returns a textarea, whereas the client side code runs the code mirror editor.
