@@ -1,7 +1,7 @@
 {
   "name": "misojs-codemirror-component",
-  "version": "0.0.4",
-  "description": "A code mirror component for use in misojs (would probably also work with mithril)",
+  "version": "0.0.5",
+  "description": "A code mirror component for use in misojs, also works with mithril through browserify",
   "main": "codemirror.component.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
