@@ -1,6 +1,6 @@
 {
   "name": "misojs-codemirror-component",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A code mirror component for use in misojs, also works with mithril through browserify",
   "main": "codemirror.component.js",
   "scripts": {
@@ -13,6 +13,18 @@
   "dependencies": {
     "codemirror": "^5.4.0",
     "mithril": "^0.2.0"
+  },
+  "miso": {
+    "external": {
+      "node_modules/codemirror/lib/codemirror.js": "codemirror/lib/codemirror.js",
+      "node_modules/codemirror/mode/javascript/javascript.js": "codemirror/mode/javascript/javascript.js",
+      "node_modules/codemirror/mode/htmlmixed/htmlmixed.js": "codemirror/mode/htmlmixed/htmlmixed.js",
+      "node_modules/codemirror/mode/markdown/markdown.js": "codemirror/mode/markdown/markdown.js",
+      "node_modules/codemirror/mode/sass/sass.js": "codemirror/mode/sass/sass.js",
+      "node_modules/codemirror/mode/css/css.js": "codemirror/mode/css/css.js",
+      "node_modules/codemirror/mode/jade/jade.js": "codemirror/mode/jade/jade.js",
+      "node_modules/codemirror/lib/codemirror.css": "codemirror/lib/codemirror.css"
+    }
   },
   "keywords": [
     "misojs",

@@ -1,11 +1,9 @@
 /*
 	Misojs Codemirror component
-
-	Note: To use with mithril, use browserify.
 */
 var m = require('mithril'),
-	//	Assume we're installed within misojs in the "public" directory - pass in different path if needed
-	basePath = "node_modules/misojs-codemirror-component/node_modules/codemirror/";
+	basePath = "external/codemirror/",
+	pjson = require("./package.json");
 
 // 	Here we have a few fixes to make CM work in node - we only setup each,
 //	if they don't already exist, otherwise we would override the browser
@@ -25,6 +23,7 @@ global.navigator.userAgent = global.navigator.userAgent || "Mozilla/5.0 (Macinto
 //	Grab code mirror and the javascript language
 //	Note: you cannot dynamically require with browserify, 
 //	so we must get whatever modes we need here.
+//	If you need other languages, simply equire them statically in your program.
 var CodeMirror = require('codemirror');
 require("codemirror/mode/javascript/javascript.js");
 require("codemirror/mode/htmlmixed/htmlmixed.js");
@@ -39,6 +38,7 @@ var CodemirrorComponent = {
 			//	though a more ideal setup would be the ability to load only
 			//	once when required.
 			m("LINK", { href: basePath + "lib/codemirror.css", rel: "stylesheet"}),
+
 			m("textarea", {config: CodemirrorComponent.config(attrs)}, attrs.value())
 		]);
 	},
